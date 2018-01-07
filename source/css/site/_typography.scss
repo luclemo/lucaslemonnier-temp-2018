@@ -1,0 +1,57 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: $grey;
+  color: $grey-pale;
+  font-family: $body;
+  font-size: 1.8rem;
+  line-height: 1.5;
+}
+
+// Headers --------------------------
+h1,
+h2,
+h3 {
+  font-family: $heading;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 7.4rem;
+}
+
+h2 {
+  font-size: 4.8rem;
+}
+
+h3 {
+  font-size: 3.6rem;
+}
+
+h4 {
+  font-family: $body-bold;
+  font-weight: normal;
+}
+
+// Blockquotes ---------------------
+blockquote {
+  p {
+    font-family: $heading;
+    font-size: 2.1rem;
+  }
+  cite {
+    text-transform: uppercase;
+    font-style: normal;
+    font-size: 1.3rem;
+    font-family: $body-bold;
+
+    &::before {
+      content: "— ";
+    }
+  }
+}
