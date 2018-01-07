@@ -1,0 +1,63 @@
+a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-skip: ink;
+  transition: all 0.2s ease;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $pink;
+  }
+}
+
+// --------------------------------
+// Buttons
+// --------------------------------
+.button {
+  text-decoration: none;
+  font-size: 2.1rem;
+  padding: 0.9em 2em;
+  display: inline-block;
+  min-width: 280px;
+  text-align: center;
+
+  &--small {
+    font-size: 1.6rem;
+    min-width: 100px;
+    padding: 0.7em 1em;
+  }
+
+  &--dark {
+    color: $grey-pale;
+    background: $martini-dark;
+  }
+
+  &--light {
+    color: $grey-pale;
+    background: $martini;
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $grey-pale;
+    background: $pink;
+  }
+}
+
+// --------------------------------
+// CTA style
+// --------------------------------
+.cta {
+  font-family: $heading;
+  font-size: 3.4rem;
+  color: $martini;
+  text-decoration: none;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $pink;
+  }
+}
