@@ -20,7 +20,8 @@ var globs = {
   scripts: ["source/js/*.js"],
   styles: ["source/css/**/*.scss"],
   html: ["source/**/*.html"],
-  images: ["source/images/**/*"]
+  images: ["source/images/**/*"],
+  fonts: ["source/fonts/**/*"]
 };
 
 // HTML
@@ -29,6 +30,14 @@ gulp.task("html", function() {
     .src(globs.html)
     .pipe(rename({ dirname: "" })) // flatten directory structure
     .pipe(gulp.dest("_build"))
+    .pipe(reload({ stream: true }));
+});
+
+// FONTS
+gulp.task("fonts", function() {
+  return gulp
+    .src(globs.fonts)
+    .pipe(gulp.dest("_build/fonts"))
     .pipe(reload({ stream: true }));
 });
 
@@ -99,7 +108,8 @@ gulp.task("watch", ["browser-sync"], function() {
   gulp.watch(globs.scripts, ["scripts"]);
   gulp.watch(globs.images, ["images"]);
   gulp.watch(globs.html, ["html"]);
+  gulp.watch(globs.fonts, ["fonts"]);
 });
 
 // the default tasks runs when you simply type 'gulp'
-gulp.task("default", ["styles", "scripts", "images", "html", "watch"]);
+gulp.task("default", ["styles", "scripts", "images", "html", "fonts", "watch"]);
