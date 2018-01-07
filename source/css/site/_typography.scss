@@ -6,11 +6,18 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: $white;
+  background: $grey;
   color: $grey-dark;
   font-family: $body;
   font-size: 1.8rem;
   line-height: 1.5;
+  @media (min-width: 2200px) {
+    font-size: 2.1rem;
+  }
+
+  &.home {
+    color: $grey-pale;
+  }
 }
 
 // Headers --------------------------
@@ -22,15 +29,39 @@ h3 {
 }
 
 h1 {
-  font-size: 7.4rem;
+  font-size: 3.6rem;
+  line-height: 1.1;
+  @include breakpoint(minmobile) {
+    font-size: 4.6rem;
+  }
+  @include breakpoint(mintablet) {
+    font-size: 6.4rem;
+  }
+  @include breakpoint(minlaptop) {
+    font-size: 7.4rem;
+  }
 }
 
 h2 {
-  font-size: 4.8rem;
+  font-size: 2.6rem;
+  line-height: 1.2;
+  @include breakpoint(minmobile) {
+    font-size: 3.6rem;
+  }
+  @include breakpoint(mintablet) {
+    font-size: 4.8rem;
+  }
 }
 
 h3 {
-  font-size: 3.6rem;
+  font-size: 2.2rem;
+  line-height: 1.2;
+  @include breakpoint(minmobile) {
+    font-size: 2.8rem;
+  }
+  @include breakpoint(mintablet) {
+    font-size: 3.6rem;
+  }
 }
 
 h4 {

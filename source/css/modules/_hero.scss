@@ -1,0 +1,55 @@
+.hero {
+  &__intro {
+    z-index: 20;
+    grid-column: 2/3;
+    @include breakpoint(minmobile) {
+      grid-row: 1;
+      align-self: center;
+      padding: 0 2em;
+    }
+    @include breakpoint(mintablet) {
+      grid-column: 2/3;
+      padding: 0;
+    }
+  }
+
+  h1 {
+    font-size: 3rem;
+    @include breakpoint(minmobile) {
+      font-size: 6vw;
+    }
+    @include breakpoint(mintablet) {
+      font-size: calc(6vw - 50%);
+    }
+  }
+  p {
+    @include breakpoint(mindesktop) {
+      font-size: 2.1rem;
+    }
+  }
+
+  &__img {
+    z-index: 10;
+    background: url("/images/lucas-hero.png");
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    grid-column: 1;
+    grid-column-end: -1;
+    grid-row: 1;
+    justify-self: none;
+    height: 80vh;
+    width: 100%;
+
+    @include breakpoint(minmobile) {
+      opacity: 0.1;
+      height: 100vh;
+    }
+
+    @include breakpoint(mintablet) {
+      opacity: 0.7;
+      grid-column: 4/6;
+      justify-self: end;
+    }
+  }
+}

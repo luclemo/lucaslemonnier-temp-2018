@@ -1,2 +1,18 @@
-body {
+.home {
+  .main-grid {
+    display: grid;
+    grid-template-columns:
+      1em
+      1fr
+      1em;
+
+    @include breakpoint(mintablet) {
+      grid-template-columns:
+        minmax(3em, 4em)
+        5fr
+        0.5fr
+        3fr
+        minmax(3em, 4em);
+    }
+  }
 }

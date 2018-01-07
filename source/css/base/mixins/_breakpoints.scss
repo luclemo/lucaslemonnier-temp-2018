@@ -38,10 +38,14 @@
     @media (max-width: 37.5em) {
       @content;
     } // 600px and down
-  } @else if $point == mobileonly {
-    @media (max-width: 27em) {
+  } @else if $point==minmobile {
+    @media (min-width: 30em) {
       @content;
-    } // 432px and down
+    } // 480px and up
+  } @else if $point == mobile {
+    @media (max-width: 30em) {
+      @content;
+    } // 480px and down
   } @else if $point == tiny {
     @media (max-width: 20em) {
       @content;
