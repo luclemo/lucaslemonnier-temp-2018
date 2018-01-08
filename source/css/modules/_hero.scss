@@ -2,18 +2,20 @@
   &__intro {
     z-index: 20;
     grid-column: 2/3;
+
     @include breakpoint(minmobile) {
       grid-row: 1;
       align-self: center;
       padding: 0 2em;
     }
+
     @include breakpoint(mintablet) {
       grid-column: 2/3;
       padding: 0;
     }
   }
 
-  h1 {
+  &__title {
     font-size: 3rem;
     @include breakpoint(minmobile) {
       font-size: 6vw;
@@ -22,13 +24,23 @@
       font-size: calc(6vw - 50%);
     }
   }
-  p {
+
+  &__text {
     @include breakpoint(mindesktop) {
       font-size: 2.1rem;
     }
   }
 
-  &__img {
+  &__booking {
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    font-family: $body-bold;
+    color: $martini;
+    margin-top: 5em;
+    letter-spacing: 0.03em;
+  }
+
+  &__figure {
     z-index: 10;
     margin: 0;
     grid-column: 1;
