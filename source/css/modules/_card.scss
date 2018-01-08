@@ -1,0 +1,27 @@
+.card {
+  background: $white;
+  box-shadow: 0 0 54px 0 rgba(70, 75, 84, 0.82);
+  color: $grey-dark;
+  padding: 3em;
+  grid-column: 2/3;
+  align-self: start;
+
+  &__header {
+    color: $grey;
+    font-family: $heading;
+    font-size: 2.1rem;
+    margin-top: 0;
+    margin-bottom: 1em;
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    line-height: 1.75;
+
+    & + .card__header {
+      margin-top: 1.33em; // header follows list
+    }
+  }
+}
