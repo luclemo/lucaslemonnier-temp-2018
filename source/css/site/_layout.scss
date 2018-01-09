@@ -23,11 +23,25 @@
 // --------------------------------
 .main-section {
   align-items: center;
+  position: relative;
+
+  @include breakpoint(mintablet) {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      transform: skewY(-8deg);
+      background: $grey;
+      border-top: 10px solid lighten($grey, $amount: 5);
+    }
+  }
 
   .card {
     grid-column: 2/3;
     align-self: start;
     justify-self: center;
+    z-index: 10;
 
     @include breakpoint(mintablet) {
       grid-column: 1 / span 2;
