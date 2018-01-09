@@ -3,8 +3,6 @@
   box-shadow: 0 0 54px 0 rgba(70, 75, 84, 0.82);
   color: $grey-dark;
   padding: 3em;
-  grid-column: 2/3;
-  align-self: start;
 
   &__header {
     color: $grey;
@@ -22,6 +20,10 @@
 
     & + .card__header {
       margin-top: 1.33em; // header follows list
+    }
+
+    li {
+      font-size: 1.6rem;
     }
   }
 }

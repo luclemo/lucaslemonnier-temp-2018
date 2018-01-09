@@ -1,5 +1,5 @@
 .home {
-  .main-grid {
+  .site-grid {
     display: grid;
     grid-template-columns:
       1em
@@ -14,5 +14,13 @@
         3fr
         minmax(3em, 4em);
     }
+  }
+}
+
+.main-section {
+  .card {
+    grid-column: 2/3;
+    align-self: start;
+    justify-self: center;
   }
 }
