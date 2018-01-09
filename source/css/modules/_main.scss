@@ -1,0 +1,54 @@
+// --------------------------------
+// Main section
+// --------------------------------
+.main-section {
+  align-items: center;
+  position: relative;
+  background: $grey;
+  @include breakpoint(mintablet) {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      top: 0;
+      height: 10%;
+      transform: skewY(-8deg);
+      background: $grey;
+      border-top: 10px solid lighten($grey, $amount: 5);
+    }
+  }
+  .card {
+    grid-column: 2/3;
+    align-self: start;
+    justify-self: center;
+    z-index: 10;
+    @include breakpoint(mintablet) {
+      grid-column: 1 / span 2;
+      justify-self: start;
+    }
+    @include breakpoint(minlaptop) {
+      justify-self: center;
+    }
+  }
+  .testimonial {
+    grid-column: 2/3;
+    @include breakpoint(mintablet) {
+      grid-column: 3 / span all;
+    }
+    @include breakpoint(minlaptop) {
+      margin: 0;
+      grid-column: 4/5;
+    }
+  }
+  .contact {
+    grid-column: 2/3;
+    align-self: center;
+  }
+  .contact__img {
+    grid-column: 2/3;
+    justify-self: center;
+    @include breakpoint(mintablet) {
+      grid-column: 4/5;
+    }
+  }
+}
