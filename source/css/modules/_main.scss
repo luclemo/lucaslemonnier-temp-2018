@@ -2,9 +2,11 @@
 // Main section
 // --------------------------------
 .main-section {
+  padding-bottom: 3em;
   align-items: center;
   position: relative;
   background: $grey;
+  grid-row-gap: 3rem;
   @include breakpoint(mintablet) {
     &::before {
       content: "";
@@ -22,14 +24,13 @@
     align-self: start;
     justify-self: center;
     z-index: 10;
-    @include breakpoint(mintablet) {
+
+    @media (min-width: 50em) and (max-width: 64em) {
       grid-column: 1 / span 2;
       justify-self: start;
     }
-    @include breakpoint(minlaptop) {
-      justify-self: center;
-    }
   }
+
   .testimonial {
     grid-column: 2/3;
     @include breakpoint(mintablet) {
@@ -43,6 +44,7 @@
   .contact {
     grid-column: 2/3;
     align-self: center;
+    justify-self: center;
   }
   .contact__img {
     grid-column: 2/3;
