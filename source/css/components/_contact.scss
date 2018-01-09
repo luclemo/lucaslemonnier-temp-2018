@@ -1,0 +1,46 @@
+// --------------------------------
+// Contact section
+// --------------------------------
+.contact {
+  &__email {
+    font-size: 3rem;
+    font-family: $heading;
+    text-decoration: none;
+    color: $martini;
+
+    @include breakpoint(minmobile) {
+      font-size: 4rem;
+    }
+
+    @include breakpoint(mintablet) {
+      font-size: 4.2vw;
+    }
+
+    @media (min-width: 2200px) {
+      font-size: 7.4rem;
+    }
+  }
+
+  &__social {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+
+    li {
+      @include breakpoint(mindesktop) {
+        font-size: 2.4rem;
+      }
+    }
+    a {
+      font-family: $heading;
+      text-decoration: none;
+      color: $martini;
+
+      &:hover {
+        color: $pink;
+      }
+    }
+  }
+}
