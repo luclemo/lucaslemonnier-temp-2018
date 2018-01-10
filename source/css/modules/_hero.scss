@@ -40,6 +40,18 @@
     color: $martini;
     margin-top: 5em;
     letter-spacing: 0.03em;
+
+    .icon {
+      width: 1em;
+      height: 1em;
+      margin-left: 0.5em;
+      position: relative;
+      top: 2px;
+      svg {
+        color: inherit;
+        fill: currentcolor;
+      }
+    }
   }
 
   &__figure {
