@@ -1,5 +1,5 @@
 // Get next month
-function nextMonth() {
+function availableMonth() {
   var month = new Array();
   month[0] = "January";
   month[1] = "February";
@@ -14,10 +14,14 @@ function nextMonth() {
   month[10] = "November";
   month[11] = "December";
 
-  var d = new Date();
-  var n = month[d.getMonth() + 1];
-  return n;
+  // today
+  var now = new Date();
+  // 6 weeks from today
+  now.setDate(now.getDate() + 42); // today's date + 42 days
+  // get month name from index number
+  var future = month[now.getMonth()];
+  return future;
 }
 
-// Run next month on .month span
-document.querySelector(".month").innerHTML = nextMonth();
+// Run next availableMonth on .month span
+document.querySelector(".month").innerHTML = availableMonth();
